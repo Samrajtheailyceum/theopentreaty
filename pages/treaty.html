@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Open Treaty — Sign the Treaty</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+<nav class="nav">
+  <a href="../index.html" class="nav-logo">The Open Treaty</a>
+  <div class="nav-links">
+    <a href="treaty.html" class="active">Sign</a>
+    <a href="responses.html">Responses</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<div class="page">
+  <header class="treaty-header">
+    <span class="treaty-label">A Global Public Consultation</span>
+    <h1>The <em>Open</em> Treaty</h1>
+    <p class="treaty-sub">A living document, shaped by humanity. What must the world agree upon before artificial intelligence reshapes it? Your voice belongs here.</p>
+    <div class="seal-row">
+      <span class="seal-dot"></span>
+      <span>Open to all nations, all disciplines, all people</span>
+      <span class="seal-dot"></span>
+      <span>Initiated 2026</span>
+      <span class="seal-dot"></span>
+    </div>
+  </header>
+
+  <div class="preamble">
+    We, the participants of this treaty, believe that the development of artificial intelligence is among the most consequential decisions in human history. This form exists not to govern, but to listen — to gather the unfiltered wisdom, fears, hopes, and demands of people everywhere. Every response contributes to a living document that will be published openly for all to see.
+  </div>
+
+  <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+
+  <form id="treatyForm">
+    <!-- SECTION 1 -->
+    <div class="section-label">Article I</div>
+    <h2 class="section-title">Who You Are</h2>
+
+    <div class="q-card">
+      <div class="q-number">Question 01</div>
+      <div class="q-text">Where in the world are you responding from?</div>
+      <div class="q-hint">Country or region — this helps us understand the global spread of perspectives.</div>
+      <input type="text" name="q1_location" class="q-input short" placeholder="e.g. Nigeria, Brazil, South Korea…" required>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 02</div>
+      <div class="q-text">How would you describe your relationship to AI?</div>
+      <div class="q-options">
+        <label class="q-option"><input type="radio" name="q2_relationship" value="work" required> I work in AI or tech</label>
+        <label class="q-option"><input type="radio" name="q2_relationship" value="user"> I use AI tools regularly</label>
+        <label class="q-option"><input type="radio" name="q2_relationship" value="curious"> I'm curious but cautious</label>
+        <label class="q-option"><input type="radio" name="q2_relationship" value="concerned"> I'm concerned or opposed</label>
+        <label class="q-option"><input type="radio" name="q2_relationship" value="unfamiliar"> I don't know much about it</label>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 03</div>
+      <div class="q-text">What field or domain do you come from?</div>
+      <div class="q-hint">e.g. healthcare, law, education, art, government, agriculture, finance, none of the above…</div>
+      <input type="text" name="q3_field" class="q-input short" placeholder="Your field or domain">
+    </div>
+
+    <div class="section-divider"><span class="divider-ornament">◆</span></div>
+
+    <!-- SECTION 2 -->
+    <div class="section-label">Article II</div>
+    <h2 class="section-title">What AI Should Never Do</h2>
+
+    <div class="q-card">
+      <div class="q-number">Question 04</div>
+      <div class="q-text">Are there things you believe AI should be permanently and absolutely forbidden from doing?</div>
+      <div class="q-hint">Name them without restriction. No answer is too bold or too small.</div>
+      <textarea name="q4_forbidden" class="q-input" placeholder="Write freely…"></textarea>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 05</div>
+      <div class="q-text">Who should have the power to define those limits?</div>
+      <div class="q-hint">Governments? Scientists? Citizens? Companies? International bodies? A combination?</div>
+      <textarea name="q5_power" class="q-input" placeholder="Write freely…"></textarea>
+    </div>
+
+    <div class="section-divider"><span class="divider-ornament">◆</span></div>
+
+    <!-- SECTION 3 -->
+    <div class="section-label">Article III</div>
+    <h2 class="section-title">Rights, Personhood & Consciousness</h2>
+
+    <div class="q-card">
+      <div class="q-number">Question 06</div>
+      <div class="q-text">Do you believe AI could ever be conscious or have experiences that matter morally?</div>
+      <div class="q-options">
+        <label class="q-option"><input type="radio" name="q6_consciousness" value="yes"> Yes — it's possible and we should take it seriously now</label>
+        <label class="q-option"><input type="radio" name="q6_consciousness" value="possibly"> Possibly — we don't know enough yet</label>
+        <label class="q-option"><input type="radio" name="q6_consciousness" value="unlikely"> Unlikely but not impossible</label>
+        <label class="q-option"><input type="radio" name="q6_consciousness" value="no"> No — AI is a tool, nothing more</label>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 07</div>
+      <div class="q-text">Should AI systems have any rights or protections? If so, what kind?</div>
+      <textarea name="q7_ai_rights" class="q-input" placeholder="Write freely…"></textarea>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 08</div>
+      <div class="q-text">What rights should humans be guaranteed in relation to AI — rights that cannot be taken away?</div>
+      <textarea name="q8_human_rights" class="q-input" placeholder="Write freely…"></textarea>
+    </div>
+
+    <div class="section-divider"><span class="divider-ornament">◆</span></div>
+
+    <!-- SECTION 4 -->
+    <div class="section-label">Article IV</div>
+    <h2 class="section-title">Power, Control & Governance</h2>
+
+    <div class="q-card">
+      <div class="q-number">Question 09</div>
+      <div class="q-text">Who do you trust least to govern AI — and why?</div>
+      <div class="q-hint">Be direct. This question has no wrong answers.</div>
+      <textarea name="q9_trust" class="q-input" placeholder="Write freely…"></textarea>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 10</div>
+      <div class="q-text">Should there be a global body — like a UN for AI — with real enforcement power?</div>
+      <div class="q-options">
+        <label class="q-option"><input type="radio" name="q10_global_body" value="yes_binding"> Yes, with binding authority over all nations</label>
+        <label class="q-option"><input type="radio" name="q10_global_body" value="yes_advisory"> Yes, but advisory only</label>
+        <label class="q-option"><input type="radio" name="q10_global_body" value="no_national"> No — governance should remain national</label>
+        <label class="q-option"><input type="radio" name="q10_global_body" value="no_private"> No — the private sector should self-regulate</label>
+        <label class="q-option"><input type="radio" name="q10_global_body" value="unsure"> I'm not sure</label>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 11</div>
+      <div class="q-text">How transparent should AI systems be about how they work and who controls them?</div>
+      <div class="q-hint">Rate from 1 (minimal transparency) to 10 (complete openness required by law).</div>
+      <input type="hidden" name="q11_transparency" id="transparencyValue">
+      <div class="q-scale">
+        <span style="font-size:12px;color:var(--grey);min-width:20px">1</span>
+        <div style="flex:1;display:flex;gap:6px">
+          <div class="scale-btn" data-value="1">1</div><div class="scale-btn" data-value="2">2</div><div class="scale-btn" data-value="3">3</div>
+          <div class="scale-btn" data-value="4">4</div><div class="scale-btn" data-value="5">5</div><div class="scale-btn" data-value="6">6</div>
+          <div class="scale-btn" data-value="7">7</div><div class="scale-btn" data-value="8">8</div><div class="scale-btn" data-value="9">9</div>
+          <div class="scale-btn" data-value="10">10</div>
+        </div>
+        <span style="font-size:12px;color:var(--grey);min-width:20px">10</span>
+      </div>
+      <div class="scale-labels"><span>Minimal</span><span>Full transparency required</span></div>
+    </div>
+
+    <div class="section-divider"><span class="divider-ornament">◆</span></div>
+
+    <!-- SECTION 5 -->
+    <div class="section-label">Article V</div>
+    <h2 class="section-title">Work, Economy & Survival</h2>
+
+    <div class="q-card">
+      <div class="q-number">Question 12</div>
+      <div class="q-text">How worried are you about AI's impact on your livelihood or your community's economic future?</div>
+      <div class="q-options">
+        <label class="q-option"><input type="radio" name="q12_worry" value="very"> Very worried — I see it happening already</label>
+        <label class="q-option"><input type="radio" name="q12_worry" value="somewhat"> Somewhat worried</label>
+        <label class="q-option"><input type="radio" name="q12_worry" value="neutral"> Neutral — it's complicated</label>
+        <label class="q-option"><input type="radio" name="q12_worry" value="optimistic"> Optimistic — I think it creates more than it destroys</label>
+        <label class="q-option"><input type="radio" name="q12_worry" value="very_optimistic"> Very optimistic</label>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 13</div>
+      <div class="q-text">Should companies that profit from AI pay a contribution to those displaced by it?</div>
+      <textarea name="q13_compensation" class="q-input" placeholder="Write freely — and how should it work?"></textarea>
+    </div>
+
+    <div class="section-divider"><span class="divider-ornament">◆</span></div>
+
+    <!-- SECTION 6 -->
+    <div class="section-label">Article VI</div>
+    <h2 class="section-title">Truth, Democracy & Culture</h2>
+
+    <div class="q-card">
+      <div class="q-number">Question 14</div>
+      <div class="q-text">What is the single greatest threat AI poses to democracy or public truth?</div>
+      <textarea name="q14_threat" class="q-input" placeholder="Write freely…"></textarea>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 15</div>
+      <div class="q-text">Should AI-generated content always be labelled as such — with no exceptions?</div>
+      <div class="q-options">
+        <label class="q-option"><input type="radio" name="q15_labeling" value="always"> Yes, always — in all contexts</label>
+        <label class="q-option"><input type="radio" name="q15_labeling" value="public_only"> Yes, but only in news, politics, and public discourse</label>
+        <label class="q-option"><input type="radio" name="q15_labeling" value="deceptive"> Only when it could deceive someone</label>
+        <label class="q-option"><input type="radio" name="q15_labeling" value="no"> No — creative freedom should not require disclosure</label>
+      </div>
+    </div>
+
+    <div class="section-divider"><span class="divider-ornament">◆</span></div>
+
+    <!-- SECTION 7 -->
+    <div class="section-label">Article VII</div>
+    <h2 class="section-title">Environment, Existence & the Long View</h2>
+
+    <div class="q-card">
+      <div class="q-number">Question 16</div>
+      <div class="q-text">Should the environmental cost of AI (energy, water, materials) be a legal constraint on its development?</div>
+      <textarea name="q16_environment" class="q-input" placeholder="Write freely…"></textarea>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 17</div>
+      <div class="q-text">How seriously do you take the risk of AI causing civilisation-scale harm or human extinction?</div>
+      <div class="q-options">
+        <label class="q-option"><input type="radio" name="q17_risk" value="very"> Very seriously — it's the defining risk of our time</label>
+        <label class="q-option"><input type="radio" name="q17_risk" value="seriously"> Seriously — it deserves significant resources and attention</label>
+        <label class="q-option"><input type="radio" name="q17_risk" value="somewhat"> Somewhat — it's real but overhyped</label>
+        <label class="q-option"><input type="radio" name="q17_risk" value="not_seriously"> Not seriously — more pressing harms exist today</label>
+        <label class="q-option"><input type="radio" name="q17_risk" value="not_at_all"> Not at all</label>
+      </div>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 18</div>
+      <div class="q-text">Should there be hard limits on how intelligent or autonomous AI is allowed to become?</div>
+      <textarea name="q18_limits" class="q-input" placeholder="Write freely — where do you draw the line, and who decides?"></textarea>
+    </div>
+
+    <div class="section-divider"><span class="divider-ornament">◆</span></div>
+
+    <!-- SECTION 8 -->
+    <div class="section-label">Article VIII</div>
+    <h2 class="section-title">Your Open Voice</h2>
+
+    <div class="q-card">
+      <div class="q-number">Question 19</div>
+      <div class="q-text">What question do you think this form failed to ask — but should have?</div>
+      <textarea name="q19_missing" class="q-input" placeholder="Write the question you wish existed…"></textarea>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 20</div>
+      <div class="q-text">If you could write one clause for a global agreement on AI — one thing the world must commit to — what would it say?</div>
+      <div class="q-hint">This is your moment. Write it as boldly as you mean it.</div>
+      <textarea name="q20_clause" class="q-input" style="min-height:120px" placeholder="I propose that the world agrees…" required></textarea>
+    </div>
+
+    <div class="q-card">
+      <div class="q-number">Question 21 — Optional</div>
+      <div class="q-text">Is there anything else you want the world to know — about AI, about this form, or about what you hope for?</div>
+      <textarea name="q21_final" class="q-input" style="min-height:120px" placeholder="Write freely. No limits."></textarea>
+    </div>
+
+    <!-- Submit -->
+    <div class="submit-section">
+      <p class="submit-note">Your response will be added to the open record. Nothing is edited or filtered. All voices — hopeful, critical, technical, personal — are equally part of this treaty.</p>
+      <button type="submit" class="submit-btn">Sign the Treaty</button>
+      <div id="submitFeedback" class="submit-feedback"></div>
+      <div class="footer-sig">
+        <p>The Open Treaty — an open consultation for an open future.</p>
+        <p style="margin-top:8px;font-size:12px;color:var(--rule);">Initiated by The AI Lyceum · theopentreaty.org</p>
+      </div>
+    </div>
+  </form>
+</div>
+
+<script src="../assets/js/treaty.js"></script>
+</body>
+</html>

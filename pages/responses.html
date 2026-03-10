@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responses — The Open Treaty</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="../index.html" class="nav-logo">The Open Treaty</a>
+  <div class="nav-links">
+    <a href="treaty.html">Sign</a>
+    <a href="responses.html" class="active">Responses</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<div class="page">
+  <header class="treaty-header">
+    <span class="treaty-label">The Open Record</span>
+    <h1>Every <em>Voice</em> Counts</h1>
+    <p class="treaty-sub">
+      Unfiltered responses from people around the world. Nothing is edited. Nothing is censored. This is humanity speaking directly about its future.
+    </p>
+  </header>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All Responses</button>
+    <button class="filter-btn" data-filter="location">By Location</button>
+    <button class="filter-btn" data-filter="field">By Field</button>
+    <button class="filter-btn" data-filter="recent">Most Recent</button>
+  </div>
+
+  <div id="responsesContainer">
+    <div class="preamble" style="text-align: center;">
+      No responses yet. Be the first to sign the treaty.
+      <br><br>
+      <a href="treaty.html" class="btn btn-primary" style="margin-top: 16px;">Sign Now</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  const responses = JSON.parse(localStorage.getItem('treatyResponses') || '[]');
+  const container = document.getElementById('responsesContainer');
+
+  if (responses.length > 0) {
+    container.textContent = '';
+
+    responses.reverse().forEach((response, index) => {
+      const card = document.createElement('div');
+      card.className = 'response-card';
+
+      // Meta section
+      const meta = document.createElement('div');
+      meta.className = 'response-meta';
+
+      const responseNum = document.createElement('span');
+      responseNum.textContent = `Response #${responses.length - index}`;
+      meta.appendChild(responseNum);
+
+      if (response.q1_location) {
+        const location = document.createElement('span');
+        location.textContent = `📍 ${response.q1_location}`;
+        meta.appendChild(location);
+      }
+
+      if (response.q3_field) {
+        const field = document.createElement('span');
+        field.textContent = `🏛 ${response.q3_field}`;
+        meta.appendChild(field);
+      }
+
+      const date = document.createElement('span');
+      date.textContent = new Date(response.timestamp).toLocaleDateString();
+      meta.appendChild(date);
+
+      card.appendChild(meta);
+
+      // Clause
+      if (response.q20_clause) {
+        const clause = document.createElement('div');
+        clause.className = 'response-clause';
+        clause.textContent = `"${response.q20_clause}"`;
+        card.appendChild(clause);
+      }
+
+      // Final thoughts
+      if (response.q21_final) {
+        const final = document.createElement('div');
+        final.className = 'response-text';
+        final.style.marginTop = '16px';
+        final.textContent = response.q21_final;
+        card.appendChild(final);
+      }
+
+      container.appendChild(card);
+    });
+  }
+
+  // Filter functionality
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      // Add more filter logic as needed
+    });
+  });
+</script>
+</body>
+</html>
