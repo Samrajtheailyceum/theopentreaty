@@ -1,0 +1,8 @@
+{
+  "name": "theopentreaty-dev",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "postCreateCommand": "npm install -g @anthropic-ai/claude-code",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  }
+}
